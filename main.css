@@ -1,12 +1,25 @@
-.container {
-
+body {
+    height: 100vh;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*이미지 반복하지 않음*/
+    background-attachment: fixed;
+    /* 배경 이미지 고정(스크롤해도 안 따라 내려감) */
 }
+
+.container {
+    padding: 50px 0;
+}
+
 .container .heroes {
     display: flex;
-    flex-wrap: wrap; /* 줄바꿈 */
-    justify-content: center; /* 이미지 가운데 정렬 */
-    background-color: orange;
-    max-width: 700px;  /* 최대 width 제한 */
+    flex-wrap: wrap;
+    /* 줄바꿈 */
+    justify-content: center;
+    /* 이미지 가운데 정렬 */
+    max-width: 700px;
+    /* 최대 width 제한 */
     margin: 0 auto;
     padding: 40px 20px;
 }
@@ -16,32 +29,40 @@
     height: 84px;
     margin: 4px;
     border: 3px solid #ffffff;
-    border-radius: 10px; 
-    box-sizing: border-box; /*border나 padding이 들어갔을 때 요소의 크기가 커지지 않도록 크기 픽스*/
+    border-radius: 10px;
+    box-sizing: border-box;
+    /*border나 padding이 들어갔을 때 요소의 크기가 커지지 않도록 크기 픽스*/
     background-color: #555;
-    overflow: hidden; /*넘치는 영역은 잘라냄*/
-    transform: skewX(-14deg); /*각도*/
-    transition: 
-        transform .1s, 
-        background-color .6s; 
+    overflow: hidden;
+    /*넘치는 영역은 잘라냄*/
+    transform: skewX(-14deg);
+    /*각도*/
+    transition:
+        transform .1s,
+        background-color .6s;
 }
 
 .container .heroes .hero:hover {
     background-color: #ff9c00;
-    transform: skewX(-14deg) scale(1.3);  /*마우스가 올라갔을 때 크기가 커짐*/
-    z-index: 1; /*제일 앞으로 나오게 함*/
+    transform: skewX(-14deg) scale(1.3);
+    /*마우스가 올라갔을 때 크기가 커짐*/
+    z-index: 1;
+    /*제일 앞으로 나오게 함*/
 
 }
 
-.container .heroes .hero .image{
+.container .heroes .hero .image {
     width: 140%;
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat; /*이미지 반복하지 않음*/
+    background-repeat: no-repeat;
+    /*이미지 반복하지 않음*/
     background-size: 90px;
     transform:
-    translateX(-16px) /*이미지 위치 옮기기*/
-    skewX(14deg); /*이미지 각도 반댓값으로 다시 맞춰줌*/
+        translateX(-16px)
+        /*이미지 위치 옮기기*/
+        skewX(14deg);
+    /*이미지 각도 반댓값으로 다시 맞춰줌*/
 }
 
 .container .heroes .hero:nth-child(1) .image{ background-image: url("images/hero1.png");}
@@ -76,3 +97,14 @@
 .container .heroes .hero:nth-child(30) .image{ background-image: url("images/hero30.png");}
 .container .heroes .hero:nth-child(31) .image{ background-image: url("images/hero31.png");}
 .container .heroes .hero:nth-child(32) .image{ background-image: url("images/hero32.png");}
+
+.container .logo {
+    max-width: 300px;
+    margin: 0 auto;
+    /*수평 정렬*/
+    padding: 0 20px;
+}
+
+.container .logo img {
+    width: 100%;
+}
